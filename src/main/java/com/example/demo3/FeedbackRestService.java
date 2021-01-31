@@ -1,12 +1,9 @@
 package com.example.demo3;
 
-import org.apache.kafka.common.protocol.types.Field;
-
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import com.example.model.FeedbackModel;
-import com.example.demo3.Feed;
 
 @Path("/feedbacks")
 public class FeedbackRestService {
@@ -15,7 +12,7 @@ public class FeedbackRestService {
     @Path("/get")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getFeedbackRecords(FeedbackModel newFeedback) {
-        newFeedback.getFeedback();
+//        newFeedback.setFeedback();
         return Response.ok(newFeedback).build();
     }
 
